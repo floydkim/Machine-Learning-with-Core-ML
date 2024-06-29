@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16F5993D2C30181700DE8FE9 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 16F5993B2C30181600DE8FE9 /* YOLOv3Tiny.mlmodel */; };
+		16F5993E2C30181700DE8FE9 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 16F5993C2C30181600DE8FE9 /* MobileNetV2.mlmodel */; };
+		16F599402C30521D00DE8FE9 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 16F5993F2C30521D00DE8FE9 /* Inceptionv3.mlmodel */; };
 		8404AC0920A248A600E1DAEA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8404AC0820A248A600E1DAEA /* CoreVideo.framework */; };
 		8404AC0B20A248AE00E1DAEA /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8404AC0A20A248AE00E1DAEA /* CoreML.framework */; };
 		8404AC0D20A248B400E1DAEA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8404AC0C20A248B400E1DAEA /* AVFoundation.framework */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16F5993B2C30181600DE8FE9 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
+		16F5993C2C30181600DE8FE9 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		16F5993F2C30521D00DE8FE9 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		8404AC0820A248A600E1DAEA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		8404AC0A20A248AE00E1DAEA /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		8404AC0C20A248B400E1DAEA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +86,9 @@
 		84CD69081FE5472200C5B7EC /* ObjectRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				16F5993C2C30181600DE8FE9 /* MobileNetV2.mlmodel */,
+				16F5993F2C30521D00DE8FE9 /* Inceptionv3.mlmodel */,
+				16F5993B2C30181600DE8FE9 /* YOLOv3Tiny.mlmodel */,
 				84CD69091FE5472200C5B7EC /* AppDelegate.swift */,
 				84CD690B1FE5472200C5B7EC /* ViewController.swift */,
 				84CD690D1FE5472200C5B7EC /* Main.storyboard */,
@@ -166,6 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CD69201FE6893A00C5B7EC /* CIImage.swift in Sources */,
+				16F599402C30521D00DE8FE9 /* Inceptionv3.mlmodel in Sources */,
+				16F5993D2C30181700DE8FE9 /* YOLOv3Tiny.mlmodel in Sources */,
+				16F5993E2C30181700DE8FE9 /* MobileNetV2.mlmodel in Sources */,
 				84CD691E1FE6892200C5B7EC /* CaptureVideoPreviewView.swift in Sources */,
 				84CD690C1FE5472200C5B7EC /* ViewController.swift in Sources */,
 				84CD691C1FE688EA00C5B7EC /* VideoCapture.swift in Sources */,
@@ -307,7 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9FMGJU3F2A;
+				DEVELOPMENT_TEAM = 3ZJZ9HWDMR;
 				INFOPLIST_FILE = "$(SRCROOT)/ObjectRecognition/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mlwithcoreml.chapter3.ObjectRecognition;
@@ -322,7 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9FMGJU3F2A;
+				DEVELOPMENT_TEAM = 3ZJZ9HWDMR;
 				INFOPLIST_FILE = "$(SRCROOT)/ObjectRecognition/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mlwithcoreml.chapter3.ObjectRecognition;
