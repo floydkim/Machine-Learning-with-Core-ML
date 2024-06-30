@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     let videoCapture : VideoCapture = VideoCapture()
     let context = CIContext()
-    let model = Inceptionv3()
+    let model = MobileNetV2()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,9 +47,9 @@ extension ViewController : VideoCaptureDelegate{
         guard let pixelBuffer = pixelBuffer else { return }
         
         guard let scaledPixelBuffer = CIImage(cvImageBuffer: pixelBuffer)
-            .resize(size: CGSize(width: 299, height: 299))
+            .resize(size: CGSize(width: 224, height: 224))
             .toPixelBuffer(context: context,
-                           size: CGSize(width: 299, height: 299),
+                           size: CGSize(width: 224, height: 224),
                            gray: false) else { return }
         
         let prediction = try? self.model.prediction(image: scaledPixelBuffer)
