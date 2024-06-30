@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     let videoCapture : VideoCapture = VideoCapture()
     let context = CIContext()
-    // let model = Inceptionv3()
+    let model = Inceptionv3()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,15 @@ extension ViewController : VideoCaptureDelegate{
         
         guard let scaledPixelBuffer = CIImage(cvImageBuffer: pixelBuffer)
             .resize(size: CGSize(width: 299, height: 299))
-            .toPixelBuffer(context: context) else { return }
+            .toPixelBuffer(context: context,
+                           size: CGSize(width: 299, height: 299),
+                           gray: false) else { return }
+        
+        let prediction = try? self.model.prediction(image: scaledPixelBuffer)
+        
+        DispatchQueue.main.sync {
+            classifiedLabel.text = prediction?.classLabel ?? "Unknown"
+        }
     }
 }
 
